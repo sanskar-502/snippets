@@ -27,21 +27,29 @@ const EditSnippetForm = ({ snippet }: { snippet: Snippet }) => {
           type="text"
           value={title}
           onChange={changeTitleHandler}
-          className="border border-gray-300 rounded px-3 py-2 text-lg font-semibold flex-grow mr-4"
+          className="bg-white/30 border-0 rounded px-3 py-2 text-lg font-semibold flex-grow mr-4 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30"
           placeholder="Snippet Title"
           aria-label="Snippet Title"
         />
-        <Button type="submit">Save</Button>
+        <Button type="submit" className="bg-white/30 text-white hover:bg-white/40 border-0 !border-none shadow-lg">Save</Button>
       </form>
 
-      <Editor
-        height="60vh"
-        theme="light"
-        defaultLanguage="cpp"
-        defaultValue={code}
-        onChange={changeCodeHandler}
-        options={{ fontSize: 16 }}
-      />
+      <div className="rounded-lg overflow-hidden shadow-lg">
+        <Editor
+          height="60vh"
+          theme="vs-dark"
+          defaultLanguage="cpp"
+          defaultValue={code}
+          onChange={changeCodeHandler}
+          options={{ 
+            fontSize: 16,
+            minimap: { enabled: true },
+            scrollBeyondLastLine: false,
+            roundedSelection: true,
+            padding: { top: 16 }
+          }}
+        />
+      </div>
     </div>
   );
 };

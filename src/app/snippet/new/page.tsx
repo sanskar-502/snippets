@@ -11,19 +11,20 @@ const page = () => {
     "use server";
     const title = formData.get("title") as string;
     const code  = formData.get("code")  as string;
-
+    
     await prisma.snippet.create({ data: { title, code } });
+
     redirect("/");
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">New Snippet</h1>
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-white drop-shadow-md">New Snippet</h1>
 
-      <form action={createSnippet} className="space-y-6">
+      <form action={createSnippet} className="space-y-6 backdrop-blur-sm bg-white/20 shadow-lg rounded-lg p-6">
         {/* Title */}
         <div className="space-y-2">
-          <Label htmlFor="title" className="font-medium text-gray-700">
+          <Label htmlFor="title" className="font-medium text-white">
             Title
           </Label>
           <Input
@@ -31,12 +32,13 @@ const page = () => {
             name="title"
             placeholder="e.g. Quick Sort in C++"
             required
+            className="bg-white/30 border-0 text-white placeholder:text-white/70 focus-visible:ring-white/30"
           />
         </div>
 
         {/* Code */}
         <div className="space-y-2">
-          <Label htmlFor="code" className="font-medium text-gray-700">
+          <Label htmlFor="code" className="font-medium text-white">
             Code
           </Label>
           <Textarea
@@ -44,13 +46,13 @@ const page = () => {
             name="code"
             rows={12}
             placeholder="// Paste or write your code here"
-            className="font-mono"
+            className="font-mono bg-white/20 border-0 text-white placeholder:text-white/70 focus-visible:ring-white/30"
             required
           />
         </div>
 
         <div className="flex justify-end">
-          <Button type="submit" className="w-32">
+          <Button type="submit" className="w-32 bg-white/30 text-white hover:bg-white/40 border-0 !border-none shadow-lg">
             Create
           </Button>
         </div>
