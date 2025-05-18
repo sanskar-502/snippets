@@ -8,7 +8,7 @@ export function SignOutButton() {
   const handleSignOut = async () => {
     toast.success("Successfully signed out");
     await signOut({ 
-      callbackUrl: window.location.origin,
+      callbackUrl: "/",
       redirect: true
     });
   };
