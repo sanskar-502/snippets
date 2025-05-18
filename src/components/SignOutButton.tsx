@@ -3,14 +3,19 @@
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export function SignOutButton() {
+  const router = useRouter();
+  
   const handleSignOut = async () => {
     toast.success("Successfully signed out");
-    await signOut({ 
-      callbackUrl: `${window.location.protocol}//${window.location.host}`,
-      redirect: true
-    });
+    
+  
+    await signOut({ redirect: false });
+    
+    
+    router.push("/");
   };
 
   return (
