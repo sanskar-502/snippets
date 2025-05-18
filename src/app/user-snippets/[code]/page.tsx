@@ -60,7 +60,7 @@ const UserSnippetsPage = async ({ params }: { params: { code: string } }) => {
 
       <div className="p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg">
         <p className="text-white">
-          <span className="font-medium">{user.name || "User"}</span>`&aposs public snippets
+          <span className="font-medium">{user.name || "User"}</span>&apos;s public snippets
           <span className="text-xs bg-white/10 px-2 py-1 ml-2 rounded-full">Code: {userCode}</span>
         </p>
       </div>
@@ -70,7 +70,7 @@ const UserSnippetsPage = async ({ params }: { params: { code: string } }) => {
           <div className="text-white/80 text-center mt-10 backdrop-blur-sm p-6 rounded-lg bg-white/10 shadow-lg">
             <p className="mb-2">No public snippets available.</p>
             <p className="text-sm text-white/60">
-              This user hasn`&apost shared any public snippets yet.
+              This user hasn&apos;t shared any public snippets yet.
             </p>
           </div>
         </div>
