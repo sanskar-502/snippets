@@ -94,6 +94,7 @@ const config = {
       };
     },
   },
+  trustHost: true,
 } satisfies NextAuthConfig;
 
 export const { auth, handlers } = NextAuth(config); 

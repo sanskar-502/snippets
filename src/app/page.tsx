@@ -73,7 +73,7 @@ const page = async () => {
         </div>
       </div>
 
-      {session && (
+      {session?.user && (
         <div className="p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-lg">
           <p className="text-white">Welcome, {session.user.name || session.user.email}</p>
           {user?.userCode && (
