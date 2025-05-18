@@ -41,7 +41,7 @@ export function Logo() {
         <div className="absolute top-1 right-1 w-1 h-1 bg-white rounded-full opacity-70" />
         <div className="absolute bottom-2 left-1 w-0.5 h-0.5 bg-white rounded-full opacity-60" />
       </div>
-      <span className="font-bold text-xl">LoveySnips</span>
+      <span className="font-bold text-xl">LovelySnips</span>
     </Link>
   );
 } 

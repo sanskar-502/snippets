@@ -1,4 +1,4 @@
-# Snippets
+# LovelySnips
 
 A modern code snippet management application built with Next.js, Prisma, and PostgreSQL. Store, organize, and share your code snippets with ease.
 

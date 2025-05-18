@@ -97,9 +97,9 @@ const page = async () => {
           
           {!userId && (
             <div className="backdrop-blur-sm bg-white/10 shadow-lg rounded-lg p-6 text-white space-y-4">
-              <h2 className="text-2xl font-semibold text-center">Welcome to LoveySnips</h2>
+              <h2 className="text-2xl font-semibold text-center">Welcome to LovelySnips</h2>
               <div className="space-y-3">
-                <p>LoveySnips is a secure platform for sharing code and text snippets with controlled access:</p>
+                <p>LovelySnips is a secure platform for sharing code and text snippets with controlled access:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><span className="font-medium">Private Sharing</span> - Share snippets securely with specific people</li>
                   <li><span className="font-medium">User Codes</span> - Each user gets a unique 4-digit code to share public snippets</li>

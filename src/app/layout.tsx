@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LoveySnips",
+  title: "LovelySnips",
   description: "Share your code snippets with a personal touch",
   icons: {
     icon: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   appleWebApp: {
-    title: "LoveySnips",
+    title: "LovelySnips",
     statusBarStyle: "black-translucent",
   },
 };

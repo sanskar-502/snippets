@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="w-full py-4 mt-8 text-center text-white/80">
       <div className="flex flex-col items-center justify-center gap-2">
         <div className="text-sm">
-          <span className="font-bold text-white">LoveySnips</span> - Share your code snippets with a personal touch
+          <span className="font-bold text-white">LovelySnips</span> - Share your code snippets with a personal touch
         </div>
         <div className="flex items-center justify-center gap-2">
           <span>Made with ❤️ by Sanskar Dubey</span>

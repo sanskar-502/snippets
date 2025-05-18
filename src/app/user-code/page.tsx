@@ -92,7 +92,7 @@ const UserCodePage = () => {
           
           <div className="text-sm text-white/70 text-center space-y-2">
             <p>
-              Each user on LoveySnips has a unique 4-digit code that allows others to view their public snippets.
+              Each user on LovelySnips has a unique 4-digit code that allows others to view their public snippets.
             </p>
             <p>
               <Link href="/login" className="text-white hover:underline">
