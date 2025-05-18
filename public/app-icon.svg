@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGradient" x1="42" y1="42" x2="470" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#9333EA" />
+      <stop offset="50%" stopColor="#C026D3" />
+      <stop offset="100%" stopColor="#EC4899" />
+    </linearGradient>
+    
+    <!-- Shadow effects -->
+    <filter id="mainShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" floodColor="#000" floodOpacity="0.5"/>
+    </filter>
+    <filter id="innerShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000" floodOpacity="0.3"/>
+    </filter>
+    
+    <!-- Shine effects -->
+    <radialGradient id="shineEffect" cx="30%" cy="30%" r="70%" fx="30%" fy="30%">
+      <stop offset="0%" stopColor="white" stopOpacity="0.7" />
+      <stop offset="100%" stopColor="white" stopOpacity="0" />
+    </radialGradient>
+    
+    <!-- Glow effect for heart -->
+    <filter id="heartGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feFlood floodColor="#FF3E88" floodOpacity="0.5" result="color" />
+      <feComposite operator="in" in="color" in2="blur" result="glow" />
+      <feComposite operator="over" in="glow" in2="SourceGraphic" />
+    </filter>
+    
+    <!-- Code glow effect -->
+    <filter id="codeGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood floodColor="#FFFFFF" floodOpacity="0.5" result="color" />
+      <feComposite operator="in" in="color" in2="blur" result="glow" />
+      <feComposite operator="over" in="glow" in2="SourceGraphic" />
+    </filter>
+  </defs>
+  
+  <!-- Base circle with 3D effect -->
+  <circle cx="256" cy="256" r="235" fill="url(#bgGradient)" filter="url(#mainShadow)" />
+  <circle cx="256" cy="256" r="235" fill="url(#shineEffect)" opacity="0.6" />
+  
+  <!-- Inner shadow ring for depth -->
+  <circle cx="256" cy="256" r="215" stroke="rgba(255,255,255,0.2)" strokeWidth="2" fill="none" />
+  
+  <!-- Code brackets with enhanced styling -->
+  <path d="M160 128h-21c-16.6 0-30 13.4-30 30v192c0 16.6 13.4 30 30 30h21" 
+    stroke="white" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"
+    filter="url(#codeGlow)" />
+  <path d="M352 128h21c16.6 0 30 13.4 30 30v192c0 16.6-13.4 30-30 30h-21" 
+    stroke="white" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"
+    filter="url(#codeGlow)" />
+  
+  <!-- Code symbols with enhanced styling -->
+  <path d="M256 235l32-24v85l-32-24" 
+    stroke="white" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" 
+    filter="url(#codeGlow)" />
+  <path d="M224 211l-32 32 32 32" 
+    stroke="white" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round"
+    filter="url(#codeGlow)" />
+  
+  <!-- Heart with special effects -->
+  <path d="M256 149c10.5-12 26-19.5 42.5-15.5 16.5 4 29.5 18.5 31 35.5 1.5 17-7.5 33.5-21.5 42.5-7 4.5-14.5 7.5-22 10.5-7.5 3-15 6-22.5 9-7.5-3-15-6-22.5-9-7.5-3-15-6-22-10.5-14-9-23-25.5-21.5-42.5 1.5-17 14.5-31.5 31-35.5 16.5-4 32 3.5 42.5 15.5z" 
+    fill="#FF3E88" stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" 
+    filter="url(#heartGlow)" />
+    
+  <!-- Sparkle effects -->
+  <circle cx="342" cy="106" r="10" fill="white" />
+  <circle cx="384" cy="149" r="7" fill="white" />
+  <circle cx="128" cy="128" r="9" fill="white" />
+  <circle cx="170" cy="384" r="8" fill="white" />
+  <circle cx="405" cy="341" r="9" fill="white" />
+  
+  <!-- Extra small sparkles -->
+  <circle cx="300" cy="400" r="4" fill="white" />
+  <circle cx="120" cy="300" r="3" fill="white" />
+  <circle cx="400" cy="200" r="5" fill="white" />
+</svg> 

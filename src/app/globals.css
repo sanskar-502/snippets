@@ -122,13 +122,13 @@ body{
     }
 }
 
-/* Grid pattern background */
+
 .bg-grid-white {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
 }
 
-/* Custom animation for background elements */
+
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -143,4 +143,21 @@ body{
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

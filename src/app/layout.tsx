@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FancyBackground } from "@/components/ui/fancy-background";
 import { Footer } from "@/components/ui/footer";
+import { ToastProvider } from "@/components/ToastProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Code Snippets",
-  description: "A beautiful app for managing code snippets",
+  title: "LoveySnips",
+  description: "Share your code snippets with a personal touch",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/app-icon.svg', sizes: '180x180', type: 'image/svg+xml' }
+    ],
+    other: [
+      { url: '/app-icon.svg', sizes: '512x512', type: 'image/svg+xml' },
+      { url: '/app-icon.svg', sizes: '192x192', type: 'image/svg+xml' },
+    ]
+  },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: "LoveySnips",
+    statusBarStyle: "black-translucent",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#9333EA',
 };
 
 export default function RootLayout({
@@ -26,6 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -35,6 +62,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </FancyBackground>
+        <ToastProvider />
       </body>
     </html>
   );
