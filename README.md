@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy on Render
+
+To deploy this application on Render:
+
+1. Create a Render account at [render.com](https://render.com)
+2. Connect your GitHub repository to Render
+3. Create a new Web Service and select your repository
+4. Configure your service:
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+5. Create a PostgreSQL database in Render
+6. Add the following environment variables:
+   - `DATABASE_URL`: This will be automatically provided by Render if you link the database
+   - `NEXTAUTH_URL`: Your Render deployment URL (e.g., https://your-app-name.onrender.com)
+   - `NEXTAUTH_SECRET`: Generate a secure random string
+   - Any other environment variables your app needs
+
+Alternatively, you can use the `render.yaml` file in this repository to deploy both the web service and database together using Render's Blueprint feature.
